@@ -24,3 +24,22 @@ steps:
             "end_date": "2021-01-08 08:00:00"
           }
         }
+
+stages:
+- stage: CI
+  jobs:
+  - job: CIWork
+    steps:
+    - script: "Do CI work"
+
+- stage: Test
+  jobs:
+  - job: TestWork
+    steps:
+    - script: "Do test work"
+
+- stage: Deploy
+  jobs:
+  - job: Deploy
+    steps:
+    - script: "Deploy"
