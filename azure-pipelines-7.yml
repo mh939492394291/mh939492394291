@@ -6,8 +6,7 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: server
 
 steps:
 - task: ServiceNow-DevOps-Server-Change-Acceleration@1
@@ -25,8 +24,3 @@ steps:
             "end_date": "2021-01-08 08:00:00"
           }
         }
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
